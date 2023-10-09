@@ -90,7 +90,8 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
                     @Override
                     public void keyTyped(KeyEvent e) {
                         SignupState currentState = signupViewModel.getState();
-                        currentState.setUsername(Arrays.toString(passwordInputField.getPassword()) + e.getKeyChar());
+                        currentState.setPassword(Arrays.toString(passwordInputField.getPassword())
+                                + e.getKeyChar());
                         signupViewModel.setState(currentState);
                     }
 
@@ -109,7 +110,8 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
                     @Override
                     public void keyTyped(KeyEvent e) {
                         SignupState currentState = signupViewModel.getState();
-                        currentState.setUsername(Arrays.toString(repeatPasswordInputField.getPassword()) + e.getKeyChar());
+                        currentState.setRepeatPassword(Arrays.toString(repeatPasswordInputField.getPassword())
+                                + e.getKeyChar());
                         signupViewModel.setState(currentState);
                     }
 
